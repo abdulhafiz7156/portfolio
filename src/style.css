@@ -11,6 +11,11 @@ a {
   color: inherit;
 }
 
+li {
+  list-style: none;
+
+}
+
 .df {
   display: flex;
 }
@@ -42,7 +47,6 @@ a {
 }
 
 .first__screen__ul li {
-  list-style-type: none;
   text-transform: uppercase;
 }
 .first__screen {
@@ -100,14 +104,13 @@ a {
   font-size: 70px;
   width: 100%;
   line-height: 150px;
+  overflow-x: hidden;
 }
 
 .second_screen{
-  overflow-x: hidden;
+  /*margin: 20px;*/
   background-color: black;
-  border: 2px solid #fff;
-  border-right: none;
-  border-left: none;
+  /*border: 2px solid #fff;*/
 }
 
 
@@ -115,5 +118,58 @@ a {
   background-image: url("./assets/me.jpeg");
   background-position: center;
   background-repeat: no-repeat;
+}
 
+.third_screen {
+  background-color: black;
+  padding: 20px;
+}
+
+.third_screen h1 {
+  font-size: 50px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 65px;
+  margin-top: 200px;
+  margin-bottom: 70px;
+}
+
+
+.third_screen hr{
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #312f2f;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.third_screen__texts p, li{
+  text-transform: uppercase;
+}
+
+.third_screen__texts {
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.third_screen__texts p:first-child {
+  width: 37%;
+}
+
+.third_screen__texts_ul {
+  width: 48%;
+
+}
+
+.third_screen__texts_ul li {
+  width: 400px;
+}
+
+.third_screen__texts_ul li:last-child {
+  margin-top: 40px;
+}
+
+.third_screen__texts ul:last-child li{
+  margin-top: 20px;
 }

@@ -119,5 +119,22 @@ onMounted(() => {
         <p>WEBPACK + GULP + RESPONSIVE + MOBILE-FIRST + SEO + NPM + ES6</p>
       </div>
     </section>
+    <section class="third_screen">
+      <h1>As a front-end developer, I specialize in utilizing HTML, CSS, JavaScript, React, Vue, and Angular to create visually appealing and user-friendly web applications. With expertise in version control systems like Git, I ensure efficient collaboration and seamless development processes.</h1>
+      <hr>
+      <div class="third_screen__texts df">
+        <p>things i can help you with...</p>
+        <ul class="third_screen__texts_ul">
+          <li>I HAVE A PASSION FOR HELPING SMALL BUSINESSES PROVIDE THEIR CLIENTS WITH THE BEST WEB
+            EXPERIENCES. SPECIALIZING IN CRAFTING UNIQUE, FUNCTIONAL, AND AESTHETICALLY PLEASING WEBSITES, I AM DEDICATED TO BRINGING YOUR IDEAS INTO THE DIGITAL ERA.</li>
+          <li>LET'S COLLABORATE TO TRANSFORM YOUR VISION INTO A CUTTING-EDGE ONLINE PRESENCE, USHERING YOUR BUSINESS INTO THE MODERN DIGITAL ERA WITH STYLE AND INNOVATION</li>
+        </ul>
+        <ul>
+          <li>Linkedin</li>
+          <li>behance</li>
+          <li>email</li>
+        </ul>
+      </div>
+    </section>
   </main>
 </template>

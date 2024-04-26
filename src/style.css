@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #fff;
+  text-transform: uppercase;
   font-family: "Agency FB";
 }
 
@@ -46,16 +47,12 @@ li {
   justify-content: space-between;
 }
 
-.first__screen__ul li {
-  text-transform: uppercase;
-}
 .first__screen {
   user-select: none;
 }
 
 .first__screen__ul li button {
   /*padding: 10px;*/
-  text-transform: uppercase;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 50px;
@@ -69,11 +66,9 @@ li {
 .first__screen__about__p {
   width: 500px;
   font-size: 16px;
-  text-transform: uppercase;
 }
 
 .first__screen__scroll__p {
-  text-transform: uppercase;
 }
 
 .first__screen__about__scroll {
@@ -83,7 +78,6 @@ li {
 
 .first__screen__text  h1{
   width: 100%;
-  text-transform: uppercase;
   font-size: 17em;
   letter-spacing: -9px;
   margin-top: 0;
@@ -128,14 +122,13 @@ li {
 .third_screen h1 {
   font-size: 50px;
   font-weight: 300;
-  text-transform: uppercase;
   line-height: 65px;
   margin-top: 200px;
   margin-bottom: 70px;
 }
 
 
-.third_screen hr{
+.screen hr{
   display: block;
   height: 1px;
   border: 0;
@@ -145,7 +138,6 @@ li {
 }
 
 .third_screen__texts p, li{
-  text-transform: uppercase;
 }
 
 .third_screen__texts {
@@ -188,7 +180,6 @@ li {
 
 .fourth__screen__container p:first-child{
   padding-top: 50px;
-  text-transform: uppercase;
   color: #000;
 }
 
@@ -224,14 +215,12 @@ li {
 
 .fourth__screen__work__text h3{
   color: #000;
-  text-transform: uppercase;
   font-weight: 300;
 }
 
 
 .fourth__screen__work__text p{
   color: grey;
-  text-transform: uppercase;
   padding-top: 5px;
   font-size: 16px;
 }
@@ -246,4 +235,87 @@ li {
 
 .fourth__screen__work__img4 {
   background: linear-gradient(301deg, rgba(255,255,255,1) 2%, rgba(0,86,179,1) 59%, rgba(7,2,33,1) 100%);
+}
+
+.fifth__screen {
+  background-color: #000;
+  padding: 20px;
+  padding-top: 90px;
+}
+
+.fifth__screen__text h1{
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 65px;
+  margin-top: 30px;
+}
+
+.fifth__screen__faq {
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #312f2f;
+  border-right: none;
+  border-left: none;
+  padding: 40px 0px;
+}
+
+
+.fifth__screen__faq p:last-child {
+  width: 350px;
+}
+
+.contacts__screen {
+  background-color: #000;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.contacts__screen__text {
+  width: 50%;
+}
+
+.contacts__screen__link {
+  width: 50%;
+  justify-content: space-around;
+}
+
+.contacts__screen__link ul {
+  width: 33%;
+
+}
+
+.contacts__screen__text p{
+  width: 230px;
+  padding-bottom: 40px;
+}
+
+.contacts__screen__text a{
+  text-decoration: underline !important;
+}
+
+.contacts__screen__link span{
+  padding-bottom: 10px;
+}
+
+.contacts__screen__link li{
+  line-height: 30px;
+}
+
+.contacts__screen__link ul li:first-child {
+  padding-bottom: 10px;
+  font-size: 17.5px;
+}
+
+.footer__screen {
+  background-color: #000;
+  padding: 20px;
+  padding-top: 350px;
+}
+
+.footer__screen h1 {
+  font-size: 275px;
+}
+
+.footer__screen ul {
+  justify-content: space-between;
 }

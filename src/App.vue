@@ -185,5 +185,75 @@ onMounted(() => {
         </div>
       </div>
     </section>
+    <section class="fifth__screen">
+      <div class="fifth__screen__text">
+        <p>how i work</p>
+        <h1>Having thrived as a freelance front-end developer for over a year, I've cultivated invaluable expertise across a spectrum of platforms and technologies. From Bitrix to Tilda.  Let's collaborate to transform your digital aspirations into reality, drawing from my rich tapestry of experience to craft bespoke solutions that leave a lasting impact! </h1>
+      </div>
+      <div class="fifth__screen__faqs">
+        <div class="fifth__screen__faq df">
+          <p>01</p>
+          <p>research and planning</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsum maxime mollitia numquam optio, repellendus.</p>
+        </div>
+        <div class="fifth__screen__faq df">
+          <p>02</p>
+          <p>research and planning</p>
+          <p>Dive into client requirements, conduct thorough research, and strategize to outline a roadmap for project development.</p>
+        </div>
+        <div class="fifth__screen__faq df">
+          <p>03</p>
+          <p>research and planning</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsum maxime mollitia numquam optio, repellendus.</p>
+        </div>
+        <div class="fifth__screen__faq df">
+          <p>04</p>
+          <p>research and planning</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsum maxime mollitia numquam optio, repellendus.</p>
+        </div>
+        <div class="fifth__screen__faq df">
+          <p>05</p>
+          <p>research and planning</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsum maxime mollitia numquam optio, repellendus.</p>
+        </div>
+      </div>
+    </section>
+    <section class="contacts__screen df">
+      <div class="contacts__screen__text">
+        <p>are you interest in collaborating to elevate your brand in the digital era? <br> let's get to work</p>
+        <a href="">xxafiz69@gmail.com</a>
+      </div>
+      <div class="contacts__screen__link df">
+        <ul >
+          <li><span>navigation</span></li>
+          <li><a href="">about</a></li>
+          <li><a href="">work</a></li>
+          <li><a href="">services</a></li>
+        </ul>
+        <ul>
+          <li><span>socials</span></li>
+          <li><a href="">telegram</a></li>
+          <li><a href="">instagram</a></li>
+          <li><a href="">linkedin</a></li>
+        </ul>
+        <ul>
+          <li><span>resources</span></li>
+          <li><a href="">Github</a></li>
+          <li><a href="">hh.ru</a></li>
+          <li><a href="">codewars</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer__screen">
+      <h1>drop me a line</h1>
+      <hr>
+      <ul class="df">
+        <li>©	hoshimov abdulhafiz</li>
+        <li>Uzbekistan (GMT +5)</li>
+        <li><a href="">back to top</a></li>
+        <li>©2024 all rights reserved</li>
+      </ul>
+      <hr>
+    </section>
   </main>
 </template>

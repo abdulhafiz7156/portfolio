@@ -173,3 +173,77 @@ li {
 .third_screen__texts ul:last-child li{
   margin-top: 20px;
 }
+
+.fourth__screen {
+  background-color: black;
+  padding: 20px;
+  padding-top: 150px;
+}
+
+.fourth__screen__container {
+  padding: 20px;
+  background-color: #c7c5c2;
+  border-radius: 15px;
+}
+
+.fourth__screen__container p:first-child{
+  padding-top: 50px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.fourth__screen__works {
+  padding: 50px 0px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.fourth__screen__work__img img {
+  width: 93%;
+  border-radius: 15px;
+}
+
+.fourth__screen__work {
+  width: 49%;
+  margin-bottom: 20px ;
+  cursor: pointer;
+}
+
+.fourth__screen__work__img {
+  padding: 30px 20px;
+  border-radius: 15px;
+  height: 450px;
+  background: linear-gradient(150deg, rgba(2,0,36,1) 1%, rgba(0,212,255,1) 42%, rgba(5,11,22,1) 71%);
+  z-index: 1;
+}
+
+.fourth__screen__work__text {
+  padding-top: 20px;
+
+}
+
+.fourth__screen__work__text h3{
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+
+.fourth__screen__work__text p{
+  color: grey;
+  text-transform: uppercase;
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+.fourth__screen__work__img2 {
+  background: linear-gradient(333deg, rgba(255,255,255,1) 6%, rgba(59,59,58,1) 100%);
+}
+
+.fourth__screen__work__img3 {
+  background: linear-gradient(65deg, rgba(255,255,255,1) 19%, rgba(255,0,0,0.8716736694677871) 100%);
+}
+
+.fourth__screen__work__img4 {
+  background: linear-gradient(301deg, rgba(255,255,255,1) 2%, rgba(0,86,179,1) 59%, rgba(7,2,33,1) 100%);
+}

@@ -8,6 +8,12 @@ const secondScreenRef = ref(null);
 const textContainerRef = ref(null);
 const animatedText3 = ref(null)
 
+const link = (link) => {
+  // router.push(link);
+  window.open(link, '_blank');
+
+}
+
 const animateScrollHint = () => {
   const tl = gsap.timeline({ repeat: -1 });
   tl.fromTo(animatedText3.value, {
@@ -134,6 +140,49 @@ onMounted(() => {
           <li>behance</li>
           <li>email</li>
         </ul>
+      </div>
+    </section>
+    <section class="fourth__screen">
+      <div class="fourth__screen__container">
+        <p>selected works</p>
+        <div class="fourth__screen__works df">
+          <div @click="link('https://gis-mining.ru/')" class="fourth__screen__work">
+            <div class="fourth__screen__work__img df_jcc_aic">
+              <img src="./assets/gis-ming.png" alt="">
+            </div>
+            <div class="fourth__screen__work__text">
+              <h3>Gis Ming</h3>
+              <p>Web development</p>
+            </div>
+          </div>
+          <div @click="link('https://gremir.ru/')" class="fourth__screen__work">
+            <div class="fourth__screen__work__img fourth__screen__work__img2 df_jcc_aic">
+              <img src="./assets/gremir.png" alt="">
+            </div>
+            <div class="fourth__screen__work__text">
+              <h3>GREMIR.RU</h3>
+              <p>Web development</p>
+            </div>
+          </div>
+          <div @click="link('https://flats-moscow.netlify.app/invest-pro-bussines.tilda.ws/index.html')" class="fourth__screen__work">
+            <div class="fourth__screen__work__img fourth__screen__work__img3 df_jcc_aic">
+              <img src="./assets/moscow.png" alt="">
+            </div>
+            <div class="fourth__screen__work__text">
+              <h3>MOSCOW new building</h3>
+              <p>Web development</p>
+            </div>
+          </div>
+          <div @click="link('https://plastic-clinic.net/')" class="fourth__screen__work">
+            <div class="fourth__screen__work__img fourth__screen__work__img4 df_jcc_aic">
+              <img src="./assets/plastic-clinic.png" alt="">
+            </div>
+            <div class="fourth__screen__work__text">
+              <h3>plastic clinic</h3>
+              <p>Web development</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>

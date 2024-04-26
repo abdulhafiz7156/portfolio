@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #fff;
+  font-family: "Agency FB";
 }
 
 a {
@@ -28,7 +30,6 @@ a {
   background-color: black;
   height: 100vh;
   color: white;
-  font-family: "Agency FB";
   padding: 20px;
   padding-bottom: 0px;
   display: flex;
@@ -69,7 +70,6 @@ a {
 
 .first__screen__scroll__p {
   text-transform: uppercase;
-
 }
 
 .first__screen__about__scroll {
@@ -89,4 +89,31 @@ a {
 .first__screen__about__scroll__text {
   flex-direction: column;
   justify-content: right;
+}
+
+.text-container p {
+ color: #F5E1E1;
+}
+
+
+.text-container {
+  font-size: 70px;
+  width: 100%;
+  line-height: 150px;
+}
+
+.second_screen{
+  overflow-x: hidden;
+  background-color: black;
+  border: 2px solid #fff;
+  border-right: none;
+  border-left: none;
+}
+
+
+.second_screen {
+  background-image: url("./assets/me.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+
 }

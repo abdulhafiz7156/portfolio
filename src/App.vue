@@ -4,20 +4,12 @@ import gsap from 'gsap';
 
 const textRef = ref(null);
 const animatedText1 = ref(null);
-const animatedText3 = ref(null);
-
-const animateText2 = () => {
-  const tl = gsap.timeline();
-  tl.from(animatedText1.value, {
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: "power4.out"
-  });
-};
+const secondScreenRef = ref(null);
+const textContainerRef = ref(null);
+const animatedText3 = ref(null)
 
 const animateScrollHint = () => {
-  const tl = gsap.timeline({ repeat: -1, yoyo: true });
+  const tl = gsap.timeline({ repeat: -1 });
   tl.fromTo(animatedText3.value, {
     opacity: 0,
     y: -20,
@@ -31,6 +23,16 @@ const animateScrollHint = () => {
     y: -20,
     duration: 1,
     ease: "power1.inOut",
+  });
+};
+
+const animateText2 = () => {
+  const tl = gsap.timeline();
+  tl.from(animatedText1.value, {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: "power4.out"
   });
 };
 
@@ -58,6 +60,23 @@ const animateText = () => {
   });
 };
 
+// Listen for window scroll events
+window.addEventListener('scroll', () => {
+  moveTextOnScroll();
+});
+
+const moveTextOnScroll = () => {
+  const scrollTop = window.scrollY;
+  const scrollHeight = document.documentElement.scrollHeight;
+  const clientHeight = document.documentElement.clientHeight;
+  const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 300;
+  const textOffset = scrollPercentage * 0.5;
+  gsap.to(textContainerRef.value.children[0], { x: textOffset, duration: 0.5, ease: 'power1.out' });
+  gsap.to(textContainerRef.value.children[1], { x: -textOffset, duration: 0.5, ease: 'power1.out' });
+  gsap.to(textContainerRef.value.children[2], { x: textOffset, duration: 0.5, ease: 'power1.out' });
+  gsap.to(textContainerRef.value.children[3], { x: -textOffset, duration: 0.5, ease: 'power1.out' });
+}
+
 onMounted(() => {
   animateText();
   animateText2();
@@ -83,13 +102,21 @@ onMounted(() => {
               As a passionate front-end developer, I specialize in crafting innovative and user-friendly web applications. I pride myself on delivering high-quality solutions that meet the unique requirements of clients and users alike.
             </p>
           </div>
-          <div class="first__screen__scroll" ref="animatedText3">
-            <p class="first__screen__scroll__p">Scroll to explore 	&#8595;	</p>
+          <div class="first__screen__scroll">
+            <p class="first__screen__scroll__p" ref="animatedText3" >Scroll to explore 	&#8595;	</p>
           </div>
         </div>
         <div class="first__screen__text">
           <h1 ref="textRef">web developer</h1>
         </div>
+      </div>
+    </section>
+    <section class="second_screen" ref="secondScreen">
+      <div class="text-container" ref="textContainerRef">
+        <p>SASS + NODE + GIT + VUE + REACT + CSS + BOOTSTRAP + ANGULAR +</p>
+        <p>TYPESCRIPT + TAILWIND + API + JAVASCRIPT + SQL + NEST + REDUX +</p>
+        <p>HTML + UI/UX + POSTMAN + WORDPRESS + TILDA + MONGODB +</p>
+        <p>WEBPACK + GULP + RESPONSIVE + MOBILE-FIRST + SEO + NPM + ES6</p>
       </div>
     </section>
   </main>

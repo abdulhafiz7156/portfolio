@@ -66,7 +66,6 @@ const animateText = () => {
   });
 };
 
-// Listen for window scroll events
 window.addEventListener('scroll', () => {
   moveTextOnScroll();
 });
@@ -92,20 +91,20 @@ onMounted(() => {
 
 <template>
   <main class="screen">
-    <section class="first__screen">
+    <section id="first__screen" class="first__screen">
       <header>
         <ul class="first__screen__ul df">
-          <li>Hoshimov <br> Abdulhafiz</li>
-          <li>Front-end <br>  Developer</li>
-          <li>Available for <br> freelance work</li>
-          <li><button><a href="#">Contact</a></button></li>
+          <li  data-aos="fade-down">Hoshimov <br> Abdulhafiz</li>
+          <li  data-aos="fade-down">Front-end <br>  Developer</li>
+          <li  data-aos="fade-down">Available for <br> freelance work</li>
+          <li  data-aos="fade-down"><button><a href="#contacts">Contact</a></button></li>
         </ul>
       </header>
       <div class="first__screen__about__scroll__text">
         <div class="first__screen__about__scroll df">
           <div class="first__screen__about">
             <p class="first__screen__about__p" ref="animatedText1">
-              As a passionate front-end developer, I specialize in crafting innovative and user-friendly web applications. I pride myself on delivering high-quality solutions that meet the unique requirements of clients and users alike.
+              Hi, i am abdulhafiz i have started my programming experience in 2020. Starting studying in education center. Being the best student in education center for a years in 2022 i have started my trip to freelance plaatforms and have worked for more than year. I AM
             </p>
           </div>
           <div class="first__screen__scroll">
@@ -119,34 +118,34 @@ onMounted(() => {
     </section>
     <section class="second_screen" ref="secondScreen">
       <div class="text-container" ref="textContainerRef">
-        <p>SASS + NODE + GIT + VUE + REACT + CSS + BOOTSTRAP + ANGULAR +</p>
-        <p>TYPESCRIPT + TAILWIND + API + JAVASCRIPT + SQL + NEST + REDUX +</p>
-        <p>HTML + UI/UX + POSTMAN + WORDPRESS + TILDA + MONGODB +</p>
-        <p>WEBPACK + GULP + RESPONSIVE + MOBILE-FIRST + SEO + NPM + ES6</p>
+        <p>SASS + NODE + GIT + VUE + REACT + CSS + BOOTSTRAP +</p>
+        <p>TYPESCRIPT + TAILWIND + API + JAVASCRIPT + SQL + NEST +</p>
+        <p>HTML + UI/UX + POSTMAN + WORDPRESS + TILDA + </p>
+        <p>WEBPACK + GULP + RESPONSIVE + SEO + NPM + ES6</p>
       </div>
     </section>
     <section class="third_screen">
-      <h1>As a front-end developer, I specialize in utilizing HTML, CSS, JavaScript, React, Vue, and Angular to create visually appealing and user-friendly web applications. With expertise in version control systems like Git, I ensure efficient collaboration and seamless development processes.</h1>
+      <h1  data-aos="fade-right">As a front-end developer, I specialize in utilizing HTML, CSS, JavaScript, React and Vue to create visually appealing and user-friendly web applications. With expertise in version control systems like Git, I ensure efficient collaboration and seamless development processes.</h1>
       <hr>
       <div class="third_screen__texts df">
-        <p>things i can help you with...</p>
-        <ul class="third_screen__texts_ul">
+        <p data-aos="fade-right">things i can help you with...</p>
+        <ul class="third_screen__texts_ul" data-aos="fade-down">
           <li>I HAVE A PASSION FOR HELPING SMALL BUSINESSES PROVIDE THEIR CLIENTS WITH THE BEST WEB
             EXPERIENCES. SPECIALIZING IN CRAFTING UNIQUE, FUNCTIONAL, AND AESTHETICALLY PLEASING WEBSITES, I AM DEDICATED TO BRINGING YOUR IDEAS INTO THE DIGITAL ERA.</li>
           <li>LET'S COLLABORATE TO TRANSFORM YOUR VISION INTO A CUTTING-EDGE ONLINE PRESENCE, USHERING YOUR BUSINESS INTO THE MODERN DIGITAL ERA WITH STYLE AND INNOVATION</li>
         </ul>
-        <ul>
-          <li>Linkedin</li>
-          <li>behance</li>
-          <li>email</li>
+        <ul  data-aos="fade-left">
+          <li><a href="https://github.com/abdulhafiz7156" target="_blank">GIthub</a></li>
+          <li><a href="https://t.me/abdulhafiz_dev" target="_blank">Telegram</a></li>
+          <li><a href="https://mail.google.com/mail/mu/mp/694/" target="_blank" title="xxafiz69@gmail.com">email</a></li>
         </ul>
       </div>
     </section>
-    <section class="fourth__screen">
+    <section id="works" class="fourth__screen">
       <div class="fourth__screen__container">
         <p>selected works</p>
         <div class="fourth__screen__works df">
-          <div @click="link('https://gis-mining.ru/')" class="fourth__screen__work">
+          <div  data-aos="fade-right" @click="link('https://gis-mining.ru/')" class="fourth__screen__work">
             <div class="fourth__screen__work__img df_jcc_aic">
               <img src="./assets/gis-ming.png" alt="">
             </div>
@@ -155,7 +154,7 @@ onMounted(() => {
               <p>Web development</p>
             </div>
           </div>
-          <div @click="link('https://gremir.ru/')" class="fourth__screen__work">
+          <div  data-aos="fade-left" @click="link('https://gremir.ru/')" class="fourth__screen__work">
             <div class="fourth__screen__work__img fourth__screen__work__img2 df_jcc_aic">
               <img src="./assets/gremir.png" alt="">
             </div>
@@ -164,7 +163,7 @@ onMounted(() => {
               <p>Web development</p>
             </div>
           </div>
-          <div @click="link('https://flats-moscow.netlify.app/invest-pro-bussines.tilda.ws/index.html')" class="fourth__screen__work">
+          <div  data-aos="fade-right" @click="link('https://flats-moscow.netlify.app/invest-pro-bussines.tilda.ws/index.html')" class="fourth__screen__work">
             <div class="fourth__screen__work__img fourth__screen__work__img3 df_jcc_aic">
               <img src="./assets/moscow.png" alt="">
             </div>
@@ -173,7 +172,7 @@ onMounted(() => {
               <p>Web development</p>
             </div>
           </div>
-          <div @click="link('https://plastic-clinic.net/')" class="fourth__screen__work">
+          <div  data-aos="fade-left" @click="link('https://plastic-clinic.net/')" class="fourth__screen__work">
             <div class="fourth__screen__work__img fourth__screen__work__img4 df_jcc_aic">
               <img src="./assets/plastic-clinic.png" alt="">
             </div>
@@ -185,72 +184,72 @@ onMounted(() => {
         </div>
       </div>
     </section>
-    <section class="fifth__screen">
+    <section id="services" class="fifth__screen">
       <div class="fifth__screen__text">
-        <p>how i work</p>
-        <h1>Having thrived as a freelance front-end developer for over a year, I've cultivated invaluable expertise across a spectrum of platforms and technologies. From Bitrix to Tilda.  Let's collaborate to transform your digital aspirations into reality, drawing from my rich tapestry of experience to craft bespoke solutions that leave a lasting impact! </h1>
+        <p  data-aos="fade-up">how i work</p>
+        <h1  data-aos="fade-right">Having thrived as a freelance front-end developer for over a year, I've cultivated invaluable expertise across a spectrum of platforms and technologies. From Bitrix to Tilda.  Let's collaborate to transform your digital aspirations into reality, drawing from my rich tapestry of experience to craft bespoke solutions that leave a lasting impact! </h1>
       </div>
       <div class="fifth__screen__faqs">
-        <div class="fifth__screen__faq df">
+        <div  data-aos="fade-up" class="fifth__screen__faq df">
           <p>01</p>
-          <p>research and planning</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsum maxime mollitia numquam optio, repellendus.</p>
-        </div>
-        <div class="fifth__screen__faq df">
-          <p>02</p>
           <p>research and planning</p>
           <p>Dive into client requirements, conduct thorough research, and strategize to outline a roadmap for project development.</p>
         </div>
-        <div class="fifth__screen__faq df">
+        <div  data-aos="fade-up" class="fifth__screen__faq df">
+          <p>02</p>
+          <p>Wireframing and Prototyping</p>
+          <p>Translate ideas into wireframes and interactive prototypes, refining designs based on user feedback and iterative improvements..</p>
+        </div>
+        <div  data-aos="fade-up" class="fifth__screen__faq df">
           <p>03</p>
-          <p>research and planning</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsum maxime mollitia numquam optio, repellendus.</p>
+          <p>Design and Development</p>
+          <p>Bring designs to life with clean, efficient code, ensuring seamless functionality and optimal user experience across various devices and platforms.</p>
         </div>
-        <div class="fifth__screen__faq df">
+        <div  data-aos="fade-up" class="fifth__screen__faq df">
           <p>04</p>
-          <p>research and planning</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsum maxime mollitia numquam optio, repellendus.</p>
+          <p>Testing and Refinement</p>
+          <p>Rigorously test the developed applications, debugging and fine-tuning to enhance performance and usability.</p>
         </div>
-        <div class="fifth__screen__faq df">
+        <div  data-aos="fade-up" class="fifth__screen__faq df">
           <p>05</p>
-          <p>research and planning</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsum maxime mollitia numquam optio, repellendus.</p>
+          <p>Handover and Support</p>
+          <p>Provide comprehensive documentation, conduct client training sessions, and offer ongoing support to ensure smooth operation and maintenance of the developed solutions.</p>
         </div>
       </div>
     </section>
-    <section class="contacts__screen df">
+    <section id="contacts" class="contacts__screen df">
       <div class="contacts__screen__text">
-        <p>are you interest in collaborating to elevate your brand in the digital era? <br> let's get to work</p>
+        <p data-aos="fade-down">are you interest in collaborating to elevate your brand in the digital era? <br> let's get to work</p>
         <a href="">xxafiz69@gmail.com</a>
       </div>
       <div class="contacts__screen__link df">
-        <ul >
+        <ul data-aos="fade-down">
           <li><span>navigation</span></li>
-          <li><a href="">about</a></li>
-          <li><a href="">work</a></li>
-          <li><a href="">services</a></li>
+          <li><a href="#first__screen">about</a></li>
+          <li><a href="#works">work</a></li>
+          <li><a href="#services">services</a></li>
         </ul>
-        <ul>
+        <ul data-aos="fade-down">
           <li><span>socials</span></li>
-          <li><a href="">telegram</a></li>
-          <li><a href="">instagram</a></li>
-          <li><a href="">linkedin</a></li>
+          <li><a href="https://t.me/abdulhafiz_dev" target="_blank">telegram</a></li>
+          <li><a href="https://www.instagram.com/abdulhaf1z_dev/"  target="_blank">instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/abdulhafiz-hoshimov-09366a268/" target="_blank">linkedin</a></li>
         </ul>
-        <ul>
+        <ul data-aos="fade-down">
           <li><span>resources</span></li>
-          <li><a href="">Github</a></li>
-          <li><a href="">hh.ru</a></li>
-          <li><a href="">codewars</a></li>
+          <li><a href="https://github.com/abdulhafiz7156" target="_blank">Github</a></li>
+          <li><a href="https://hh.ru"  target="_blank" title="Abdulhafiz Hoshimov Obidjonovich">hh.ru</a></li>
+          <li><a href="https://www.codewars.com/users/xxafiz" target="_blank">codewars</a></li>
         </ul>
       </div>
     </section>
     <section class="footer__screen">
-      <h1>drop me a line</h1>
+      <h1 data-aos="zoom-in-up">drop me a line</h1>
       <hr>
       <ul class="df">
         <li>©	hoshimov abdulhafiz</li>
         <li>Uzbekistan (GMT +5)</li>
-        <li><a href="">back to top</a></li>
+        <li><a href="#first__screen">back to top</a></li>
         <li>©2024 all rights reserved</li>
       </ul>
       <hr>

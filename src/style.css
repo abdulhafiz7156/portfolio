@@ -327,3 +327,5 @@ li {
 .footer__screen ul {
   justify-content: space-between;
 }
+
+::-webkit-scrollbar{display: none}

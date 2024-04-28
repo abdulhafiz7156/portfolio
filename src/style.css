@@ -346,7 +346,6 @@ li {
   }
 }
 
-
 @media screen and (max-width: 1000px) {
   .third_screen {
     overflow-x: hidden;
@@ -391,7 +390,10 @@ li {
     margin-top: 40px;
   }
   .fourth__screen__work__img {
-    height: 185px;
+    height: auto;
+  }
+  .fourth__screen__work__img img {
+    width: 100%;
   }
   .contacts__screen__text {
     font-size: 14px;
@@ -412,6 +414,12 @@ li {
     padding-top: 10px;
     font-size: 16px;
   }
+  .fourth__screen__works {
+    display: block;
+  }
+  .fourth__screen__work {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -422,15 +430,6 @@ li {
   .third_screen__texts_ul li {
     width: 350px;
   }
-
-  .fourth__screen__work__img img {
-    width: 120%;
-  }
-
-  .fourth__screen__work__img {
-    height: 130px;
-  }
-
   .fifth__screen__text h1 {
     font-size: 25px;
   }
@@ -448,7 +447,9 @@ li {
   }
   .footer__screen ul li:first-child{
     display: none;
-
+  }
+  .first__screen__ul li,a {
+    font-size: 14px;
   }
 }
 

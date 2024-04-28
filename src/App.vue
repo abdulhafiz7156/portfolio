@@ -1,15 +1,18 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
+
 const textRef = ref(null);
 const textContainer = ref(null);
 const animatedText1 = ref(null);
 const secondScreenRef = ref(null);
 const textContainerRef = ref(null);
 const animatedText3 = ref(null)
+
 const link = (link) => {
   window.open(link, '_blank');
 }
+
 const animateScrollHint = () => {
   const tl = gsap.timeline({ repeat: -1 });
   tl.fromTo(animatedText3.value, {
@@ -62,7 +65,6 @@ const animateText = () => {
   });
 };
 
-
 window.addEventListener('scroll', () => {
   moveTextOnScroll();
 });
@@ -79,10 +81,19 @@ const moveTextOnScroll = () => {
   gsap.to(textContainerRef.value.children[3], { x: -textOffset, duration: 0.5, ease: 'power1.out' });
 }
 
+window.addEventListener('blur', () => {
+  document.title = 'where are you? 😢'
+})
+
+window.addEventListener('focus', () => {
+  document.title = 'Abdulhafiz Hoshimov'
+})
+
 onMounted(() => {
   animateText();
   animateText2();
   animateScrollHint();
+
 });
 
 </script>

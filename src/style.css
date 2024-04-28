@@ -375,14 +375,20 @@ li {
     font-size: 35px;
   }
   .footer__screen__h1 {
-    font-size: 11vw;
+    font-size: 9vw;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .footer__screen__h1 {
+    font-size: 8vw;
+  }
   .first__screen__about__p {
     width: 276px;
     font-size: 12px;
+  }
+  .first__screen__text {
+    font-size: 10vw;
   }
   .first__screen__scroll {
     margin-bottom: 20px;
@@ -430,6 +436,9 @@ li {
 }
 
 @media screen and (max-width: 576px) {
+  .first__screen__text {
+    font-size: 9vw;
+  }
   .first__screen__scroll__p {
     display: none;
   }

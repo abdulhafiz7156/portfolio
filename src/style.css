@@ -4,12 +4,12 @@
   box-sizing: border-box;
   color: #fff;
   text-transform: uppercase;
-  font-family: "Agency FB";
+  font-family: "Agency FBI";
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Agency FB";
+  font-family: "Agency FBI";
   src: url("./assets/font/agencyfb_reg.ttf")
 }
 

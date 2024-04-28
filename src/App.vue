@@ -1,19 +1,15 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
-
 const textRef = ref(null);
+const textContainer = ref(null);
 const animatedText1 = ref(null);
 const secondScreenRef = ref(null);
 const textContainerRef = ref(null);
 const animatedText3 = ref(null)
-
 const link = (link) => {
-  // router.push(link);
   window.open(link, '_blank');
-
 }
-
 const animateScrollHint = () => {
   const tl = gsap.timeline({ repeat: -1 });
   tl.fromTo(animatedText3.value, {
@@ -66,6 +62,7 @@ const animateText = () => {
   });
 };
 
+
 window.addEventListener('scroll', () => {
   moveTextOnScroll();
 });
@@ -87,6 +84,7 @@ onMounted(() => {
   animateText2();
   animateScrollHint();
 });
+
 </script>
 
 <template>
@@ -111,7 +109,7 @@ onMounted(() => {
             <p class="first__screen__scroll__p" ref="animatedText3" >Scroll to explore 	&#8595;	</p>
           </div>
         </div>
-        <div class="first__screen__text">
+        <div class="first__screen__text" ref="textContainer">
           <h1 ref="textRef">web developer</h1>
         </div>
       </div>
@@ -244,7 +242,9 @@ onMounted(() => {
       </div>
     </section>
     <section class="footer__screen">
-      <h1 data-aos="zoom-in-up">drop me a line</h1>
+      <div class="footer__screen__h1">
+        <h1 data-aos="zoom-in-up">drop me a line</h1>
+      </div>
       <hr>
       <ul class="df">
         <li>©	hoshimov abdulhafiz</li>

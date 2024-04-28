@@ -5,6 +5,12 @@
   color: #fff;
   text-transform: uppercase;
   font-family: "Agency FB";
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Agency FB";
+  src: url("./assets/font/agencyfb_reg.ttf")
 }
 
 a {
@@ -78,7 +84,6 @@ li {
 
 .first__screen__text {
   font-size: 12vw;
-
 }
 
 .first__screen__text  h1{
@@ -335,10 +340,6 @@ li {
 
 
 @media screen and (max-width: 1400px) {
-  * {
-    font-family: 'Agency FB';
-
-  }
   .fourth__screen__work__img {
     height: 350px;
   }

@@ -416,7 +416,6 @@ li {
 }
 
 
-
 @media screen and (max-width: 1400px) {
   .fourth__screen__work__img {
     height: 350px;
@@ -509,6 +508,13 @@ li {
   .fourth__screen__work {
     width: auto;
   }
+  .second_screen h1 {
+    font-size: 30px;
+  }
+  .second_screen_card p {
+    margin-left: 0px;
+
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -542,6 +548,13 @@ li {
   }
   .first__screen__ul li,a {
     font-size: 14px;
+  }
+  .second_screen_card p {
+    width: auto;
+    font-size: 18px;
+  }
+  .second_screen_card marquee {
+    font-size: 13vw;
   }
 }
 

@@ -100,7 +100,7 @@ li {
 }
 
 .text-container p {
- color: #F5E1E1;
+  color: #F5E1E1;
   font-size: 80px;
 }
 
@@ -113,16 +113,42 @@ li {
 }
 
 .second_screen{
-  /*margin: 20px;*/
   background-color: black;
-  /*border: 2px solid #fff;*/
+  padding: 20px;
+  padding-top: 100px;
+}
+
+.second_screen_card marquee {
+  font-size: 8vw;
+  color: grey;
+  transition: color 0.6s ease;
+}
+
+.second_screen_card {
+  margin-top: 50px;
+
+}
+
+.marquee.hovered {
+  color: white ;
 }
 
 
-.second_screen {
-  background-image: url("./assets/me.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
+.second_screen h1 {
+  font-size: 60px;
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.second_screen_card p{
+  color: grey;
+  margin-left: 40px;
+  font-size: 20px;
+  width: 500px;
+  transition: color 0.6s ease;
+}
+.text-hovered {
+  color: white !important;
 }
 
 .third_screen {

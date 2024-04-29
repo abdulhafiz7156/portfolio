@@ -8,7 +8,35 @@ const animatedText1 = ref(null);
 const secondScreenRef = ref(null);
 const textContainerRef = ref(null);
 const animatedText3 = ref(null);
-const cursorColor = ref(null);
+const marqueeColor = ref('grey');
+const textColor = ref('grey');
+const isHovered = ref([false, false, false, false])
+const cards = ref([
+  {
+    id: 1,
+    title: "Landing Page Development ★ Landing Page Development ★ Landing Page Development ★ Landing Page Development ★ Landing Page Development",
+    description: "Optimizing landing pages for user engagement and conversion using HTML, CSS, and JavaScript.",
+    direction: "left"
+  },
+  {
+    id: 2,
+    title: "CRM ★ CRM ★ CRM ★ CRM ★ CRM ★ CRM ★ CRM ★ CRM ★ CRM ★ CRM ★ CRM ★ CRM",
+    description: "Implementing the front-end interface for CRM systems used to manage customer interactions and data.",
+    direction: "right"
+  },
+  {
+    id: 3,
+    title: "E-commerce Website ★ E-commerce Website ★ E-commerce Website ★ E-commerce Website ★ E-commerce Website ★",
+    description: "Building the front-end of e-commerce platforms to showcase products and facilitate online transactions.",
+    direction: "left"
+  },
+  {
+    id: 4,
+    title: "Web Application Refactoring ★ Web Application Refactoring ★ Web Application Refactoring ★ Web Application Refactoring ★ Web Application Refactoring ★",
+    description: "Refactoring existing front-end codebase to improve performance, maintainability, and scalability.",
+    direction: "right"
+  }
+])
 
 const link = (link) => {
   window.open(link, '_blank');
@@ -66,22 +94,6 @@ const animateText = () => {
   });
 };
 
-window.addEventListener('scroll', () => {
-  moveTextOnScroll();
-});
-
-const moveTextOnScroll = () => {
-  const scrollTop = window.scrollY;
-  const scrollHeight = document.documentElement.scrollHeight;
-  const clientHeight = document.documentElement.clientHeight;
-  const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 300;
-  const textOffset = scrollPercentage * 0.5;
-  gsap.to(textContainerRef.value.children[0], { x: textOffset, duration: 0.5, ease: 'power1.out' });
-  gsap.to(textContainerRef.value.children[1], { x: -textOffset, duration: 0.5, ease: 'power1.out' });
-  gsap.to(textContainerRef.value.children[2], { x: textOffset, duration: 0.5, ease: 'power1.out' });
-  gsap.to(textContainerRef.value.children[3], { x: -textOffset, duration: 0.5, ease: 'power1.out' });
-}
-
 window.addEventListener('blur', () => {
   document.title = 'where are you? 😢'
 })
@@ -133,6 +145,15 @@ const customCursor = () => {
 };
 
 
+const handleHover = (index) => {
+  isHovered.value[index] = true;
+};
+
+const handleLeave = (index) => {
+  isHovered.value[index] = false;
+};
+
+
 
 onMounted(() => {
   animateText();
@@ -173,12 +194,18 @@ onMounted(() => {
         </div>
       </div>
     </section>
-    <section class="second_screen" ref="secondScreen">
-      <div class="text-container" ref="textContainerRef">
-        <p>SASS + NODE + GIT + VUE + REACT + CSS + BOOTSTRAP +</p>
-        <p>TYPESCRIPT + TAILWIND + API + JAVASCRIPT + SQL + NEST +</p>
-        <p>HTML + UI/UX + POSTMAN + WORDPRESS + TILDA + </p>
-        <p>WEBPACK + GULP + RESPONSIVE + SEO + NPM + ES6</p>
+    <section class="second_screen">
+      <h1>What do i actually do</h1>
+      <div class="second_screen_cards">
+        <div class="second_screen_card" @mouseover="handleHover" @mouseleave="handleLeave">
+
+        </div>
+        <div class="second_screen_card" v-for="(card, index) in cards"  @mouseover="handleHover(index)" @mouseleave="handleLeave(index)">
+          <marquee ref="marquee" behavior="alternate" scrollamount="25" :direction="card.direction" :class="{'hovered': isHovered[index]}" class="marquee">
+            {{ card.title }}
+          </marquee>
+          <p :class="{'text-hovered': isHovered[index]}">{{card.description}}</p>
+        </div>
       </div>
     </section>
     <section class="third_screen">

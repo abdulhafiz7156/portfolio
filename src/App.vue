@@ -266,6 +266,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
+        <p class="link__github">to see more project you can visit my <a href="https://github.com/abdulhafiz7156" target="_blank">github</a> </p>
       </div>
     </section>
     <section id="services" class="fifth__screen">

@@ -7,7 +7,8 @@ const textContainer = ref(null);
 const animatedText1 = ref(null);
 const secondScreenRef = ref(null);
 const textContainerRef = ref(null);
-const animatedText3 = ref(null)
+const animatedText3 = ref(null);
+const cursorColor = ref(null);
 
 const link = (link) => {
   window.open(link, '_blank');
@@ -89,17 +90,64 @@ window.addEventListener('focus', () => {
   document.title = 'Abdulhafiz Hoshimov'
 })
 
+const customCursor = () => {
+  const cursor = document.querySelector('.cursor');
+  const cursorTailCount = 5; // Number of tail elements
+  const cursorTailElements = [];
+
+  // Create cursor tail elements
+  for (let i = 0; i < cursorTailCount; i++) {
+    const tailElement = document.createElement("div");
+    tailElement.classList.add("cursor-tail");
+    document.body.appendChild(tailElement);
+    cursorTailElements.push(tailElement);
+  }
+
+  function updateCursorTail(event) {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    for (let i = cursorTailElements.length - 1; i > 0; i--) {
+      const prevX = cursorTailElements[i - 1].style.left;
+      const prevY = cursorTailElements[i - 1].style.top;
+      cursorTailElements[i].style.left = prevX;
+      cursorTailElements[i].style.top = prevY;
+    }
+
+    cursorTailElements[0].style.left = mouseX + "px";
+    cursorTailElements[0].style.top = mouseY + "px";
+  }
+
+  // Track mouse movement and update cursor tail
+  document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;");
+    updateCursorTail(e);
+  });
+
+  document.addEventListener('click', e => {
+    cursor.classList.add("expand");
+    setTimeout(() => {
+      cursor.classList.remove("expand");
+    }, 500);
+  });
+};
+
+
+
 onMounted(() => {
   animateText();
   animateText2();
   animateScrollHint();
-
+  customCursor();
 });
+
+
 
 </script>
 
 <template>
   <main class="screen">
+    <div class="cursor"></div>
     <section id="first__screen" class="first__screen">
       <header>
         <ul class="first__screen__ul df">

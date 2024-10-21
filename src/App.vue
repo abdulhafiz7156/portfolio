@@ -238,12 +238,12 @@ onMounted(() => {
               <p>Web development</p>
             </div>
           </div>
-          <div  data-aos="fade-left" @click="link('https://gremir.ru/')" class="fourth__screen__work">
+          <div  data-aos="fade-left" @click="link('https://stylerf.ru')" class="fourth__screen__work">
             <div class="fourth__screen__work__img fourth__screen__work__img2 df_jcc_aic">
-              <img src="./assets/gremir.png" alt="">
+              <img src="./assets/stylerf.ru.png" alt="">
             </div>
             <div class="fourth__screen__work__text">
-              <h3>GREMIR.RU</h3>
+              <h3>STYLERF.RU</h3>
               <p>Web development</p>
             </div>
           </div>
